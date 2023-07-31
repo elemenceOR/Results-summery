@@ -47,8 +47,7 @@ This taught me hot to arrange everything with DIVs and use custom properties wit
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@elemenceOR](https://www.frontendmentor.io/profile/elemenceOR)
 
 
 
