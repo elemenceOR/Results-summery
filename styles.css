@@ -1,0 +1,334 @@
+:root {
+    /*background*/
+    --clr-accent-1: hsl(252, 100%, 67%);
+    --clr-accent-2: hsl(241, 81%, 54%);
+    /*circle*/
+    --clr-accent-3: hsla(256, 72%, 46%, 1);
+    --clr-accent-4: hsla(241, 72%, 46%, 0);
+
+    --clr-primary-1: hsl(0, 100%, 67%);
+    --clr-primary-2: hsl(39, 100%, 56%);
+    --clr-primary-3: hsl(166, 100%, 37%);
+    --clr-primary-4: hsl(234, 85%, 45%);
+
+    --clr-neutral-1: hsl(0, 0%, 100%);
+    --clr-neutral-2: hsl(221, 100%, 96%);
+    --clr-neutral-3: hsl(241, 100%, 89%);
+    --clr-neutral-4: hsl(224, 30%, 27%);
+
+    --ff-primary: 'Hanken Grotesk', sans-serif;
+
+    --ff-body: var(--ff-primary);
+
+    --fw-regular: 500;
+    --fw-bold: 800;
+    --fw-semi-bold: 700;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+body {
+    background-color: #dce3ff;
+    font-family: var(--ff-body);
+}
+
+p:not([class]) {
+    font-size: 12px;
+    font-weight: var(--fw-regular);
+    color: var(--clr-neutral-3);
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.main-container {
+    height: 500px;
+    width: 750px;
+    background-color: #fdfdfd;
+    border-radius: 30px;
+    display: flex;
+    box-shadow: 10px 10px 20px -10px var(--clr-neutral-4);
+    margin-top: 10%;
+}
+
+.results {
+    height: 500px;;
+    width: 375px;
+    background: linear-gradient(var(--clr-accent-1),var(--clr-accent-2));
+    border-radius: 30px;
+    text-align: center;
+    color: var(--clr-neutral-3);
+}
+
+.summery {
+    height: 500px;;
+    width: 375px;
+    background-color: var(--clr-neutral-1);
+    border-radius: 30px;
+}
+
+@media (max-width: 50em) {
+    .main-container {
+        margin: 0;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+
+    .results {
+        height: 45%;;
+        width: 100%;
+        border-radius: 0 0 30px 30px;
+    }
+
+    .summery {
+        border-radius: 0;
+        height: 55%;
+        width: 100%;
+    }
+}
+
+.topic {
+    font-size: 20px;
+    margin-top: 25px;
+    color: var(--clr-neutral-3);
+    font-weight: var(--fw-semi-bold);
+}
+
+.circle {
+    background: linear-gradient(to top, var(--clr-accent-4), var(--clr-accent-3));
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+    line-height: 1.3;
+}
+
+.score {
+    font-size: 60px;
+    color: var(--clr-neutral-1);
+    font-weight: var(--fw-bold);
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-neutral-3);
+}
+
+.expression {
+    font-size: 22px;
+    font-weight: var(--fw-semi-bold);
+}
+
+.explanation {
+    width: 70%;
+    font-weight: var(--fw-regular);
+    color: var(--clr-neutral-3);
+    line-height: 1.2;
+    margin-top: 10px;
+
+}
+
+.content {
+    font-size: 20px;
+    margin: 20px;
+    color: var(--clr-neutral-4);
+    font-weight: var(--fw-semi-bold);
+}
+
+@media (min-width: 50em) {
+    .topic {
+        margin-top: 30px;
+    }
+
+    .content {
+        margin-top: 30px;
+    }
+
+    .circle {
+        height: 175px;
+        width: 175px;
+        border-radius: 50%;
+        display: flex;
+        line-height: 1.3;
+        margin-top: 40px;
+    }
+
+    .expression {
+        margin-top: 30px;
+        font-size: 25px;
+    }
+
+    .explanation {
+        margin-top: 10px;
+        width: 60%;
+    }
+}
+
+.card-container {
+    height: 300px;
+    #border: 2px solid red;
+    margin: 10px 25px 25px 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    #border: 1px solid blue;
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    display: inline-flex;
+    position: relative;
+}
+
+.card:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.reaction {
+    background-color: hsla(0, 100%, 67%, 0.1);
+    color: var(--clr-primary-1);
+}
+
+.memory {
+    background-color: hsla(39, 100%, 56%, 0.1);
+    color: var(--clr-primary-2);
+}
+
+.verbal {
+    background-color: hsla(166, 100%, 37%, 0.1);
+    color: var(--clr-primary-3);
+}
+
+.visual {
+    background-color: hsla(234, 85%, 45%, 0.1);
+    color: var(--clr-primary-4);
+}
+
+.card-icon {
+    width: 20px;
+    aspect-ratio: 1;
+    margin-left: 15px;
+}
+
+.card-type {
+    font-size: 15px;
+    font-weight: var(--fw-semi-bold);
+    margin: auto 15px;
+}
+
+.card-score {
+    font-size: 15px;
+    font-weight: var(--fw-semi-bold);
+    color: var(--clr-neutral-3);
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translate(0, -50%);
+}
+
+.card-score span {
+    color: var(--clr-neutral-4);
+}
+
+.button-container {
+    #border: 2px green solid;
+    margin: 0 25px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    border: none;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    background-color: var(--clr-neutral-4);
+    color: var(--clr-neutral-1);
+    cursor: pointer;
+}
+
+.btn:hover, .btn:focus {
+    background: linear-gradient(var(--clr-accent-1),var(--clr-accent-2));
+}
+
+.attribution {
+}
